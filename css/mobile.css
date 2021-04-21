@@ -1,0 +1,192 @@
+
+body { font-family: 'Noto Sans KR', "나눔고딕", "Nanum Gothic", sans-serif; font-size: 16px; color: #fff; /*background: pink;*/ }
+/*font-family: "Times New Roman", Times, serif;*/
+a { color: #fff; }
+
+#wrap { width: 100%; overflow: hidden; }
+
+/*header*/
+header { padding: 10px 20px; position: relative; }
+header > h1 {width: 65px; height: 31px; background: url("../img/h_logo.png") no-repeat; text-indent: -9999px; float: left; }
+
+div.h_menu { float: right; }
+div.h_menu > input { width: 100px; display: none; }
+
+div.h_menu > p { margin-left: 10px; display: inline-block; text-indent: -9999px;}
+div.h_menu > p:nth-of-type(1) { width: 29px; height: 31px; background: url("../img/h_search.png") no-repeat center center; }
+div.h_menu > p:last-child { width: 29px; height: 31px; background: url("../img/h_menu.png") no-repeat center center; }
+
+
+nav { width: 100%; height: 100vh;  position: absolute; top: 0; right: -100%; background: rgba(0,0,0,0.9); z-index: 99; transition: all 0.3s linear;  box-sizing: border-box; padding: 0 20px; position: fixed;}
+/*p.btn2 { height: 48px; background: url("../img/nav_close.png") no-repeat center center; text-indent: -9999px; float: right; margin-right: 28px; display: block;  }*/
+div.n_wrap { position: relative; width: 100%; padding-top: 51px;}
+p.btn2 { width: 29px; height: 51px; background: url("../img/nav_close.png") no-repeat center center; background-size: 18px auto; text-indent: -9999px;  position: absolute; top: 0; right: 0; z-index: 30; transform: translate(100px); transition: all 1s linear 1s; }
+p.btn2.on { transform: translate(0); transition: all 1s linear; }
+
+ul.top { font-size: 12px; border-bottom: 1px solid #fff; /*margin-bottom: 5px;*/}
+ul.top > li { width: 32%; display: inline-block; }
+ul.top > li:last-child { width: 66%; margin-bottom: 10px; }
+ul.top > li > ul > li { display: inline-block; margin-right: 3px; }
+ul.gnb > li > a { font-size: 18px; display: block; line-height: 50%; /*background: pink;*/ margin: 10px 0;}
+ul.gnb > li:nth-child(4) > a { margin-bottom: 0px; }  
+ul.gnb > li > ul { line-height: 1.1; }
+ul.gnb ul > li { font-size: 12px; display: inline-block; margin-right: 10px;  line-height: 1.1;/*line-height: -1;*/}
+ul.gnb > li > div > a { font-size: 12px;/* display: block;*/ }
+ul.gnb > li > div > ul { line-height: 1.1; } 
+ul.gnb ul > li > a { color: #999; }
+
+/*contents*/
+section { width: 100%; margin: 0 auto; }
+
+/*section.C_main { width: 100%; height: 480px;  position: relative; overflow: hidden; }*/
+section.C_main { position: relative; width: 100%; height: 500px; background: url("../img/mainimg.jpg") no-repeat center center; background-size: cover;  /*animation: mv 5s 1 both;*/ animation-timing-function: ease-in; }
+section.C_main::after { content: ""; display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.4); position: absolute; top: 0; left: 0; }
+section.C_main > h1 { display: none; }
+
+
+/*section.C_main > img { width: 100%; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); text-align: center; width: auto; height: 500px; animation: mv 5s 1 both;*/ 
+/*
+@-webkit-keyframes mv {
+  from { background-size: auto 500px;  }
+  to { background-size: auto 600px;  }
+}
+
+@keyframes mv {
+  from { background-size: auto 500px;  }
+  to { background-size: auto 600px;  }
+}
+*/
+
+
+section.C_main > div { /* padding: 0px 60px; */ width: 250px; padding: 100px 0; /*overflow: hidden;*/ /*height: 150px;*/ margin: 0 auto; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-sizing: border-box; z-index: 5;/*margin-left: -110px;*/ border: 1px solid #fff;  }
+section.C_main > div > p { text-align: center; color: #fff; }
+section.C_main > div > p:first-child::after { content: ""; display: block; width: 30px; border-bottom: 2px solid #fff; margin: 20px auto; }
+section.C_main > div > p:first-child { font-size: 26px; font-weight: bold; letter-spacing: -1px;}
+section.C_main > div > p:last-child { font-size: 16px; line-height: 1.4; }
+
+/*section.C_main > div::after { content: ""; display: block; background: #fff; animation: C_main 5s infinite; position: absolute; }*/
+
+
+
+
+/*	@keyframes C_main{
+		0% { width: 1px; height: 0px; position: absolute; left: 0; top: 0;}
+		10% { width: 1px; height: 100px; position: absolute; left: 0; top: 0;}
+
+		20% { width: 0px; height: 1px; position: absolute; left: 0; top: 100px;}
+		30% { width: 100px; height: 1px; position: absolute; left: 0; top: 100px; }
+
+		40% { width: 1px; height: 0px; position: absolute; right: : 0; bottom: 0px; }
+		50% { width: 1px; height: 100px; position: absolute; right: 0; bottom: 0px; }
+
+		60% { width: 0px; height: 1px; position: absolute; right: 0; top: 0; }
+		75% { width: 100px; height: 1px; position: absolute; right: 0; top: 0; }
+
+		100% { width: 1px; height: 0px; position: absolute; left: 0; top: 0; }
+
+	}*/
+/*section.vis { background : url("../img/vision_bg.jpg") no-repeat center -2%; background-size: 200%; }*/
+div.credo > h2 { padding: 20px 10px 10px; }
+section.vis > div { width: 100%; overflow: hidden; }
+section.vis > div > img { display: block; width: 200%; position: relative; left: -40%; z-index: -90;} }
+section.vis > div { /*background : url("../img/vision_bg.jpg") no-repeat center top; background-size: 250%;*/}
+/*section.vis > h2::after { display: block; content: ""; width:100%; height: 200px; background : url("../img/vision_bg.jpg") no-repeat center; background-size: cover; position:relative; left: -10px;    z-index: -90;}*/
+div.credo { background: rgba(0,0,0,0.3); color: #fff; /*margin-top: -30px;*/  /*height: 200px; background-position: center bottom; position: relative; top: 100px;*/}
+/*div.credo > p::before { display: block; content: ""; width:100%; height: 200px; background : url("../img/vision_bg.jpg") no-repeat center; position: relative; top: -50px; z-index: -90; }*/
+div.credo > p { padding-top: 10px; text-align: center; }
+div.credo > h3 { font-size: 100px; text-align: center; font-weight: 700; letter-spacing: -10px; margin-top: -30px;}
+
+div.Asp { width: 50%; height: 185px; float: left; background: rgba(38,56,149,0.5); text-align: center; padding: 20px 0;}
+div.Asp > h4 { font-size: 20px; }
+div.Asp > p:nth-of-type(1) { font-size: 16px; line-height: 1; } 
+div.Asp > p:nth-of-type(2) { font-size: 14px; padding: 20px; } 
+
+div.Cor { width: 50%; height: 185px; float: left; background: rgba(23,174,131,0.5); text-align: center; padding: 20px 0;}
+div.Cor > h4 { font-size: 20px; }
+div.Cor > p:nth-of-type(1) { font-size: 16px; line-height: 1; } 
+div.Cor > p:nth-of-type(2) { font-size: 14px; padding: 10px 10px 0; }
+div.Cor > p:nth-of-type(3) { font-size: 11px; padding: 10px 20px; }
+
+section.news > h2 { color: #777; padding: 20px 10px 10px; }
+section.news > h2::after { content: ""; background: url("../img/news_arrow.png") no-repeat; width: 15px; height: 12px; display: inline-block; margin-left: 5px;}
+.bxslider > li > figure { width: 375px; height: 200px; overflow: hidden; position: relative; margin: 0 auto; }
+.bxslider > li > figure > img { position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.bxslider > li > div { max-width: 375px; margin: 0 auto; padding: 22px 20px 20px; color: #777;}
+p.date { float: right; font-size: 12px; }
+p.title { font-size: 22px; clear: both; line-height: 1.3; font-weight: bold;}
+p.text { font-size: 16px; padding: 10px 0 15px; line-height: 1.2; }
+
+.bxslider > li p:last-child { font-size: 14px;  font-weight: bold; }
+.bxslider > li p:last-child::after { content: ""; background: url("../img/readarrow.png") no-repeat; display: inline-block; width: 6px; height: 9px; margin-left: 5px; }
+
+.bx-pager { width: 81px; /*display: block;*/ margin: 0 auto; /* position: relative; left: 50%; transform: translate(-50%); -webkit-transform: translate(-50%);*/ }
+.bx-pager-item { display: inline-block; padding: 5px; }
+.bx-pager-link { display: block; /*float: left;*/ border: 1px solid #777; border-radius: 50%; width: 15px; height: 15px; text-indent: -9999px; }
+.bx-pager-link.active { background: #777; }
+/*.news > a {  font-size: 12px; line-height: 1.6;height: 30px; color: #fff; margin: 0 auto; text-align: center;*/ /*padding-top: 20px;}*/
+.news > a > p { background: #777; width: 230px; padding: 8px 0px; margin: 20px auto 0; text-align: center; font-size: 14px; /*line-height: 3;*/ color: #fff; }
+
+section.media { width: 100%; background: rgba(0,0,0,0.6); position: relative; margin: 40px auto 0; }
+/*section.media::after { content:""; width: 100%; height:100%; background: url("../img/media_bg.jpg")no-repeat; display: block; position: absolute; top: 0; opacity: 1; z-index: -1;}*/
+section.media > h2 { padding: 10px; }
+div.m_main { width: 100%; height: 100%; }
+div.m_main > h3 { display: none; }
+div.m_main > p:first-of-type { float: right; font-size: 12px; padding: 10px;}
+div.m_main > p:last-of-type { font-size: 26px; margin: 20px 10px 30px; text-align: center; font-family: 'Sedgwick Ave', cursive; line-height: 1.5; clear: both; }
+div.m_sub { background: rgba(0,0,0,0.5); padding: 30px 0 50px;}
+ul.subSlide > li:first-child { margin-left: 10px; }
+ul.subSlide > li > p { font-size: 10px; }
+ul.subSlide > li img { width: 100%; height: auto; }
+/*section.media { width: 100%; height:500px; background: url("../img/media_bg.jpg") no-repeat; background-color: rgba( 255, 255, 255, 0.5 ); position: relative;}
+section.media > h2 { width: 100%; height: 100%; background-color: rgba( 255, 255, 255, 0.5 ); position: absolute; z-index: -1;}*/
+
+div.rss { width:100%; height: 100%;  padding-bottom: 60px; position: relative; background: rgba(0,0,0,0.5); }
+div.rss::after { content: ""; width: 100%; height: 100%; background: url("../img/rss_bg.jpg") center center no-repeat; background-size:cover; position: absolute; top: 0; left: 0; opacity: 0.9; z-index: -1;}
+div.rss > h2 { padding: 10px 10px 30px; }
+div.rss > p { margin: 0 auto; width: 55%; font-size: 12px; text-align: center; word-break: keep-all; }
+div.rss > p.r > a { border-bottom: 1px solid #fff;}
+
+/*section.Fsite { padding-left: 10px; }*/
+section.Fsite { background: rgba(0,0,0,0.1); }
+section.Fsite > h2 { padding: 10px; color: #777; }
+section.Fsite > ul > li h3 { font-size: 14px; padding: 10px; }
+section.Fsite > ul > li > ul a { color: #777; }
+section.Fsite > ul > li > ul > li { width: 50%; font-size: 14px; float: left; /*display: none;*/ }
+section.Fsite > ul > li { position: relative; }
+section.Fsite > ul > li h3::after { content: ""; width: 14px; height: 9px; background: url("../img/f_site_arrow_on.png") no-repeat; position: absolute; right: 10px; top: 18px; z-index: 60; }
+section.Fsite > ul > li h3.on::after { content: ""; width: 14px; height: 9px; background: url("../img/f_site_arrow_off.png") no-repeat; position: absolute; right: 10px; top: 18px; z-index: 60; } 
+li.hol h3 { background: rgba(0,0,0,0.3); }
+/*li.hol h3::after { content: ""; width: 14px; height: 9px; background: url("../img/f_site_arrow_on.png") no-repeat; position: absolute; right: 10px; top: 18px; z-index: 99;}*/
+li.inf h3 { background: rgba(0,0,0,0.4); }
+li.con h3 { background: rgba(0,0,0,0.5); }
+li.aff h3 { background: rgba(0,0,0,0.6); }
+
+/*ul.FF a > h3.on::after*/
+/*ul.FF > li.on { width : 100%; height: 44px; overflow: hidden; }*/
+/*ul.FF > li.active { overflow: visible; }
+ul.on { padding: 10px; }*/
+
+section.Fsite > ul > li > ul {  padding: 10px; display: none; }
+
+/*ul.on { display: none; }
+li.hol:hover .on { display: block; }*/
+
+/*ul.on { padding: 10px; transition: all 0.5s ease; height: 0;}
+ul.on.active { padding: 10px; transition: all 0.5s ease; display: block; }*/
+
+/*ul.on { display: none; transition: all 1.2s; }
+ul.FF > li:hover > ul.on { display: block; padding: 10px; transition: all 1.2s; }*/
+/*ul.FF > li:active .on { display: block; }*/
+/*왜 안될까...active..
+링크 넘어가는것도 막는거 물어봐야함
+그리고 모바일에서 hover대신 css에 클릭이벤트 어떻게 넣어야하는지도 확인
+미디어 서브쪽도 왜 앞에가 아니고 뒤에꺼가 보이는지
+*/
+
+footer { widows: 100%; background: rgba(0,0,0,0.8); padding: 10px; }
+footer > p:first-child { width: 78px; height: 37px; background: url("../img/f_logo.png")no-repeat; text-indent: -9999px; margin: 10px 0; }
+footer > ul > li { display: inline-block; font-size: 13px; color: #777; margin-right: 12px;}
+footer > ul > li:last-child { margin-right: 0; }
+footer > p:nth-of-type(2) { font-size: 13px; color: #777; }
+footer > ul > li > a { color: #777; }
+footer > a { display: block;  margin: 20px 0 40px; }
